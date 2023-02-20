@@ -9,7 +9,7 @@ import javax.persistence.SequenceGenerator;
 public class Citizen {
 
     @Id
-    @SequenceGenerator(name = "citizen_sequence", sequenceName = "citizen_sequence", allocationSize = 1, initialValue=1)
+    @SequenceGenerator(name = "ecitizen_sequence", sequenceName = "citizen_sequence", allocationSize = 1, initialValue=1)
     @GeneratedValue(generator = "citizen_sequence")
     private long id;
 
