@@ -2,6 +2,9 @@ package com.keyin.passenger;
 
 import javax.persistence.*;
 
+import com.keyin.aircraft.Aircraft;
+import com.keyin.city.City;
+
 @Entity
 public class Passenger {
     @Id
@@ -14,6 +17,9 @@ public class Passenger {
 
     @ManyToOne
     private City city;
+
+    @ManyToOne
+    private Aircraft aircraft;
 
     public long getId() {
         return id;

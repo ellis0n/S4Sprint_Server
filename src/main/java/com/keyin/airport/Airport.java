@@ -1,6 +1,8 @@
 package com.keyin.airport;
 
 
+import com.keyin.city.City;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,9 @@ public class Airport {
     private long id;
     private String name;
     private String code;
+
+    @ManyToOne
+    private City city;
 
     public long getId() {
         return id;
