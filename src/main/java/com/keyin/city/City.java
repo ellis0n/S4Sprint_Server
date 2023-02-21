@@ -3,7 +3,7 @@ package com.keyin.city;
 import com.keyin.airport.Airport;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 public class City {
@@ -17,7 +17,7 @@ public class City {
     private int population;
 
     @OneToMany(mappedBy = "city")
-    private Set<Airport> airports;
+    private List<Airport> airports;
 
     public Long getId() {
         return id;
@@ -51,11 +51,11 @@ public class City {
         this.population = population;
     }
 
-    public Set<Airport> getAirports() {
-        return airports;
+    public List<Airport> getAirports() {
+        return (List<Airport>) airports;
     }
 
-    public void setAirports(Set<Airport> airports) {
+    public void setAirports(List<Airport> airports) {
         this.airports = airports;
     }
 }
